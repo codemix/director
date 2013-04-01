@@ -1,4 +1,6 @@
 {
+  "name": "Director Docs",
+  "version": "0.0.1",
   "dependencies": {
     "component/jquery": "*",
     "codemix/bootstrap-component": "*",
