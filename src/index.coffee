@@ -1,6 +1,7 @@
 ###
 # Director.coffee
 ###
+$ = require "jquery"
 
 ###
 Creates / Returns the director instance for the
