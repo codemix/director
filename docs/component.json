@@ -1,5 +1,5 @@
 {
-  "name": "Director Docs",
+  "name": "director-docs",
   "version": "0.0.1",
   "dependencies": {
     "component/jquery": "*",
