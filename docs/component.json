@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "component/jquery": "*",
+    "codemix/bootstrap-component": "*",
+    "codemix/director": "*"
+  },
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}

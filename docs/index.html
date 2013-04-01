@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Director.coffee Test</title>
+    <link rel="stylesheet" href="build/build.css" />
+    <script src="build/build.js"></script>
+    <script>
+      var $ = jQuery = require("jquery");
+      require("bootstrap-component");
+      director = require("director");
+      console.log(director);
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container">
+        <div class="hero-unit">
+          <h1>Director - Simple directives for jQuery and Zepto</h1>
+        </div>
+      </div>
+
+    </div>
+    <button x-alert="Hello World">Alert</button>
+    <button x-confirm="Are you sure?" x-alert="Hello World">Confirm Then Alert</button>
+    <div class="demo" style="display:none;">
+      <strong>This should be hidden</strong>
+    </div>
+    <a href="#" x-trigger="toggle" x-target=".demo">Show / Hide</a>
+
+    <form action="http://www.google.com/">
+      <a href="#" x-trigger="submit" x-target="form" x-confirm="Are you sure you want to submit the form?">Submit The Form</a>
+    </form>
+
+    <div id="myModal" class="modal" style="display:none;">
+      A modal dialog
+    </div>
+
+    <a href="#" x-trigger="modal" x-target="#myModal">Trigger The Modal</a>
+
+
+
+    <span x-bind="app.name"></span>
+
+    <div class="todo-list" x-context="todo">
+      <p>There are <strong id="totalIncomplete" x-bind="incomplete().length" x-listen="add change remove">0</strong> incomplete items in the todo list.</p>
+      <div class="btn-group">
+        <button class="btn btn-primary" x-trigger="append" x-target="ul.items" x-args="$('#todo-item-template').html()">Add</button>
+      </div>
+      <script type="x-template" id="todo-item-template">
+        <li class="todo-item" x-context="items[0]">
+          <input type="checkbox" x-trigger="html" x-target="#totalIncomplete" x-args="$('input[type=checkbox]').length - $('input[type=checkbox]:checked').length"/>
+          <input type="text" x-trigger="html" x-target="#totalIncomplete" x-args="$('input[type=checkbox]').length - $('input[type=checkbox]:checked').length" />
+          <button class="btn btn-danger" x-trigger="remove" x-target=".todo-item" x-emit="remove">Remove</button>
+        </li>
+      </script>
+      <ul class="items">
+
+      </ul>
+    </div>
+
+
+    <script>
+      var director = require("director")();
+      director.start();
+      console.log("started");
+    </script>
+  </body>
+</html>
