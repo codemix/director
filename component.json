@@ -2,7 +2,7 @@
   "name": "director",
   "repo": "codemix/director",
   "description": "Simple, extendable directives for jQuery",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [],
   "dependencies": {
     "component/jquery": "*"

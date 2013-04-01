@@ -1,7 +1,7 @@
 
 # director
 
-  Simple, extendable directives for jQuery and Zepto
+  Simple, extendable directives for jQuery
 
 ## Installation
 
@@ -9,7 +9,7 @@
 
 ## API
 
-   
+
 
 ## License
 
